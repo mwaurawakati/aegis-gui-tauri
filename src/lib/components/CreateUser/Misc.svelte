@@ -29,7 +29,8 @@
   </ul>
 </div>
 
-<style>
+<style lang="postcss">
+  @reference "tailwindcss";
   li {
     @apply flex items-center justify-between py-2;
   }

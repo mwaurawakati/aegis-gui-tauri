@@ -21,7 +21,7 @@
   import packagesStore from "../lib/stores/packagesStore";
   import accountsStore from "../lib/stores/accountsStore";
   import { readTextFile } from "@tauri-apps/plugin-fs"
-  import { getCurrent } from "@tauri-apps/api/window";
+  import { getCurrentWindow } from "@tauri-apps/api/window";
   import { Window } from "@tauri-apps/api/window";
   let consoleOpen = true;
   let shareLog = false;
@@ -197,7 +197,7 @@
     <Button fullWidth variant="bordered" on:click={shareLogs}
       >Do you want to share the logs ?</Button
     >
-    <Button fullWidth on:click={async () => await getCurrent().close()}
+    <Button fullWidth on:click={async () => await getCurrentWindow().close()}
       >Close</Button
     >
   </div>
@@ -224,7 +224,7 @@
     <Button fullWidth variant="bordered" on:click={shareLogs}
       >Do you want to share the logs ?</Button
     >
-    <Button fullWidth on:click={async () => await getCurrent().close()}
+    <Button fullWidth on:click={async () => await getCurrentWindow().close()}
       >Close</Button
     >
   </div>

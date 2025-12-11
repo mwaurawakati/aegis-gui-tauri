@@ -56,7 +56,8 @@
         "title": "AthenaOS Installer",
         "width": 1400,
         "center": true,
-        "maximizable": true
+        "maximizable": true,
+        "maximized": true
       }
     ],
     "security": {

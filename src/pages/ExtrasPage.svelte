@@ -252,7 +252,7 @@
 </StepWrapper>
 
 <style>
-  li {
+  /* li {
     @apply flex items-center justify-between py-2;
-  }
+  } */
 </style>

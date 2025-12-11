@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Router, Route } from "svelte-routing";
+  import { Router, Route } from "svelte5-router";
 
   import stepsConfig from "./stepsConfig";
   import globalStore from "./lib/stores/globalStore";

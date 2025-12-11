@@ -64,69 +64,9 @@ impl Default for Partition {
         }
     }
 }
-#[derive(Debug, PartialEq, Clone, Deserialize, Serialize)]
-pub struct Bootloader {
-    #[serde(rename = "type")]
-    pub r#type: String,
-    pub location: String,
-}
 
-impl Default for Bootloader {
-    fn default() -> Bootloader {
-        Bootloader {
-            r#type: String::new(),
-            location: String::new(),
-        }
-    }
-}
 
-#[derive(Debug, PartialEq, Clone, Deserialize, Serialize)]
-pub struct Locale {
-    pub locale: Vec<String>,
-    pub timezone: String,
-    pub virtkeymap: String,
-    pub x11keymap: String,
-}
-impl Default for Locale {
-    fn default() -> Locale {
-        Locale {
-            locale: vec![],
-            timezone: String::new(),
-            virtkeymap: String::new(),
-            x11keymap: String::new(),
-        }
-    }
-}
-#[derive(Debug, PartialEq, Clone, Deserialize, Serialize)]
-pub struct Networking {
-    pub hostname: String,
-    pub ipv6: bool,
-}
 
-impl Default for Networking {
-    fn default() -> Networking {
-        Networking {
-            hostname: String::new(),
-            ipv6: false,
-        }
-    }
-}
-#[derive(Debug, PartialEq, Clone, Deserialize, Serialize)]
-pub struct Params {
-    pub cores: i32,
-    pub jobs: i32,
-    pub keep: bool,
-}
-
-impl Default for Params {
-    fn default() -> Params {
-        Params {
-            cores: 0,
-            jobs: 0,
-            keep: false,
-        }
-    }
-}
 #[allow(non_snake_case)]
 #[derive(Debug, PartialEq, Clone, Deserialize, Serialize)]
 pub struct Config {

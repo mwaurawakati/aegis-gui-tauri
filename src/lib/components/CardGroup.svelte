@@ -58,12 +58,13 @@
   {/each}
 </fieldset>
 
-<style>
+<style lang="postcss">
+  @reference "tailwindcss";
   .radio-btn {
     @apply appearance-none h-7 w-7 bg-neutral-500 rounded-full;
   }
   .radio-btn:checked {
-    @apply bg-primary-500;
+    @apply bg-yellow-500;
   }
   .radio-btn:checked::before {
     content: url(../../assets/icons/check-bg-yellow.svg);

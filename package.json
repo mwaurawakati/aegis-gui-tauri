@@ -11,40 +11,52 @@
     "check": "yarn svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.4.2",
-    "@tauri-apps/cli": "^1.5.9",
-    "@tsconfig/svelte": "^5.0.0",
-    "@types/node": "^20.6.3",
-    "@types/svelte-range-slider-pips": "^2.0.3",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
-    "prettier": "3.0.3",
-    "sass": "^1.68.0",
-    "svelte": "^4.0.5",
-    "svelte-check": "^3.4.6",
-    "svelte-range-slider-pips": "^2.2.3",
-    "svelte-routing": "^2.6.0",
-    "tailwindcss": "^3.3.3",
-    "tslib": "^2.6.0",
-    "typescript": "^5.0.2",
-    "vite": "^4.5.3"
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "@tauri-apps/cli": "^2.9.6",
+    "@tsconfig/svelte": "^5.0.6",
+    "@types/node": "^24.10.1",
+    "@types/svelte-range-slider-pips": "^2.0.4",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "prettier": "3.7.4",
+    "sass": "^1.96.0",
+    "svelte": "^5.43.8",
+    "svelte-check": "^4.3.4",
+    "svelte-range-slider-pips": "^4.1.0",
+    "svelte-routing": "^2.13.0",
+    "svelte5-router": "^3.0.2",
+    "tailwindcss": "^4.1.17",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4"
   },
   "dependencies": {
     "@splidejs/svelte-splide": "^0.2.9",
-    "@tauri-apps/api": ">=2.0.0-beta.0",
-    "@tauri-apps/plugin-autostart": "^2.0.0-beta.1",
-    "@tauri-apps/plugin-fs": "^2.0.0-beta.3",
-    "@tauri-apps/plugin-shell": "^2.0.0-beta.4",
-    "bcrypt": "^5.1.1",
-    "class-variance-authority": "^0.7.0",
-    "svelte-headlessui": "^0.0.26",
-    "svelte-transition": "^0.0.10",
-    "tauri-plugin-system-info-api": "^0.1.1"
+    "@tailwindcss/postcss": "^4.1.17",
+    "@tailwindcss/vite": "^4.1.17",
+    "@tauri-apps/api": "^2.9.1",
+    "@tauri-apps/plugin-autostart": "^2.5.1",
+    "@tauri-apps/plugin-fs": "^2.4.4",
+    "@tauri-apps/plugin-shell": "^2.3.3",
+    "bcrypt": "^6.0.0",
+    "class-variance-authority": "^0.7.1",
+    "svelte-headlessui": "^0.0.46",
+    "svelte-transition": "^0.0.17",
+    "tauri-plugin-system-info-api": "^2.0.10"
   },
   "description": "This is the Graphical User Installer for Athena OS.",
   "main": "index.html",
   "repository": "https://github.com/Athena-OS/aegis-gui-tauri",
   "author": "Athena OS team",
   "license": "GNU",
+  "files": [
+    "dist"
+  ],
+  "svelte": "dist/index.js",
+  "exports": {
+    ".": {
+      "svelte": "./dist/index.js"
+    }
+  },
   "packageManager": "yarn@4.3.1+sha512.af78262d7d125afbfeed740602ace8c5e4405cd7f4735c08feb327286b2fdb2390fbca01589bfd1f50b1240548b74806767f5a063c94b67e431aabd0d86f7774"
 }

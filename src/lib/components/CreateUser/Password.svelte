@@ -84,7 +84,8 @@
   </div>
 </div>
 
-<style>
+<style lang="postcss">
+  @reference "tailwindcss";
   .active {
     @apply bg-yellow-500 text-black;
   }

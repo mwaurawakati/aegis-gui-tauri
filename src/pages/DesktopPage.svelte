@@ -118,7 +118,7 @@
 
     {
       name: "SDDM",
-      selected: $desktopStore.displayManager === "ssdm",
+      selected: $desktopStore.displayManager === "sddm",
     },
   ];
   let displayManagerListNix = [
@@ -262,7 +262,7 @@
 </StepWrapper>
 
 <style>
-  .active {
+  /* .active {
     @apply bg-yellow-500 text-black;
-  }
+  } */
 </style>

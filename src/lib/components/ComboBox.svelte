@@ -7,7 +7,7 @@
     export let expand = true;
     export let id = uid();
     export let label = "";
-    export let loading = false;
+    // export let loading = false;
     export let name: any;
     export let options: {
         name?: string;
@@ -220,6 +220,7 @@
                     {#if icon}
                         <img src={icon} alt="dropdown icon" />
                     {/if}
+                    <!-- svelte-ignore a11y-role-has-required-aria-props -->
                     <input
                         bind:this={inputElement}
                         on:focus
@@ -244,6 +245,8 @@
                         aria-expanded={isListOpen}
                         aria-required={required ? "true" : undefined}
                     />
+                    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
                     <img
                         class="absolute right-3 top-0 bottom-0 my-auto cursor-pointer"
                         on:click={(e)=>{
@@ -276,7 +279,7 @@
                             role="option"
                             tabindex={option.disabled === true
                                 ? undefined
-                                : "-1"}
+                                : -1}
                             data-text={option.text}
                             data-value={option.value}
                             aria-selected={value === option.value}
@@ -323,7 +326,7 @@
         position: relative;
     }
 
-    .combobox__input {
+    /* .combobox__input {
         margin: 0;
         width: 100%;
         padding: 0.8rem 1rem;
@@ -337,14 +340,12 @@
 
     .combobox:focus-within .combobox__input {
         border-color: var(--accent-color);
-    }
+    } */
 
-    .combobox__list {
-        /* Reset */
+    /* .combobox__list {
         list-style: none;
         margin: 0;
         padding: 0.3rem;
-        /* Position and Size */
         position: absolute;
         inset-inline-start: 0;
         inset-block-start: calc(100% + 0.3rem);
@@ -353,19 +354,17 @@
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         z-index: 100;
-
-        /*background-color: var(--background-color);*/
         border-radius: 0.3em;
         border: 0.175rem solid var(--accent-color);
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    }
+    } */
 
-    .list__option-heading {
+    /* .list__option-heading {
         font-size: 0.9em;
         padding-inline: 1rem;
         padding-block-start: 0.4rem;
         color: gray;
-    }
+    } */
 
     .list__no-results {
         padding: 0.8rem 1rem;
